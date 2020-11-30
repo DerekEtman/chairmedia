@@ -8,6 +8,7 @@
   Chair Media's Business Page
 </h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/09908e77-10d4-43df-9d54-5962a879c5c1/deploy-status)](https://app.netlify.com/sites/chairmedia/deploys)
 
 ## 🚀 A Beginning
 
