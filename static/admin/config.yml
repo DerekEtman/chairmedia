@@ -3,10 +3,15 @@ backend:
   branch: main # Branch to update (optional; defaults to master)
 
 local_backend: true
+site_url: https://www.chairmedia.io
+display_url: https://www.chairmedia.io
 
 # These lines should *not* be indented
 media_folder: "images/uploads" # Media files will be stored in the repo under images/uploads
 public_folder: "/images" # The src attribute for uploaded media will begin with /images/uploads
+
+# add link to logo image
+# logo_url: 
 
 
 collections:
@@ -22,3 +27,18 @@ collections:
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/index.md"
+        label: "Landing Page"
+        name: "index"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Subheading, name: Subheading, widget: string}
+
+
+
