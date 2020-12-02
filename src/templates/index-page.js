@@ -14,7 +14,7 @@ export const IndexPageTemplate = ({ image, title, heading, subheading }) => {
   )
 }
 
-IndexPageTemplate.PropTypes = {
+IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -35,7 +35,7 @@ const IndexPage = ({ data }) => {
   )
 }
 
-IndexPage.PropTypes = {
+IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
