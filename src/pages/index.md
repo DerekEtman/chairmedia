@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Super Test
-image: /images/chair-production-logo-black.png
+image: {image: /images/chair-production-logo-BLACK.png}
 heading: Because we can
 subheading: Because we should
 Subheading: Test
