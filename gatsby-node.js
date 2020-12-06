@@ -29,6 +29,7 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     const posts = result.data.allMarkdownRemark.edges
+    // console.log("############Results", result)
 
     posts.forEach((edge) => {
       const id = edge.node.id
@@ -71,10 +72,9 @@ exports.createPages = ({ actions, graphql }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = ({ node,  getNode, actions, }) => {
   const { createNodeField } = actions
-  fmImagesToRelative(node) // convert image paths for gatsby images
-  console.log("################HERE##############")
+
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode })
     createNodeField({

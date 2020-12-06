@@ -1,12 +1,13 @@
 import { graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Layout from "../components/Layout"
+import Layout from "../components/Layout" 
+import Img from "gatsby-image"
 
 export const IndexPageTemplate = ({ image, title, heading, subheading }) => {
   return (
     <div>
-      <img src={image} alt="placeholder" />
+      <Img src={image} alt="placeholder" />
       <h1>{title}</h1>
       <h2>{heading}</h2>
       <h3>{subheading}</h3>
@@ -23,6 +24,8 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
+
+  console.log("THIS IS DATA!!!!: ", data)
   return (
     <Layout>
       <IndexPageTemplate
@@ -51,11 +54,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+          image
         }
         heading
         subheading
@@ -63,3 +62,8 @@ export const pageQuery = graphql`
     }
   }
 `
+// childImageSharp {
+//   fluid(maxWidth: 2048, quality: 100) {
+//     ...GatsbyImageSharpFluid
+//   }
+// }

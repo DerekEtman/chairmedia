@@ -1,10 +1,9 @@
-import React from "react"
+import { withPrefix } from "gatsby"
 import React from "react"
 import { Helmet } from "react-helmet"
-import useSiteMetadata from "./SiteMetadata"
-import { withPrefix } from "gatsby"
-import Navbar from "./Navbar"
 import Footer from "./Footer"
+import Navbar from "./Navbar"
+import useSiteMetadata from "./SiteMetadata"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()

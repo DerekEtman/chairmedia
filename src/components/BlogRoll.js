@@ -87,11 +87,7 @@ export default () => (
                 date(formatString: "MMMM DD, YYYY")
                 featuredpost
                 featuredimage {
-                  childImageSharp {
-                    fluid(maxWidth: 120, quality: 100) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
+                  image
                 }
               }
             }
@@ -102,3 +98,10 @@ export default () => (
     render={(data, count) => <BlogRoll data={data} count={count} />}
   />
 )
+
+
+// childImageSharp {
+//   fluid(maxWidth: 120, quality: 100) {
+//     ...GatsbyImageSharpFluid
+//   }
+// }
